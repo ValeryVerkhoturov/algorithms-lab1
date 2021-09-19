@@ -2,35 +2,37 @@
 {
     static class HoareSort
     {
-        public static void Quicksort(ref Queue<int> queue)
+        public static void QuicksortNoPivot(ref Queue<int> queue)
         {
-            Quicksort(ref queue, 0, queue.Length());
+            QuicksortNoPivot(ref queue, 0, queue.Length());
         }
-        public static void Quicksort(ref Queue<int> queue, int p, int r)
+
+        public static void QuicksortNoPivot(ref Queue<int> queue, int leftBound,
+            int rightBound)
         {
-            if (p < r)
+            int i = leftBound, j = rightBound;
+            while (i != j)
             {
-                int q = Partition(ref queue, p, r);
-                Quicksort(ref queue, p, q - 1);
-                Quicksort(ref queue, q + 1, r);
-            }
-        }
-        
-        static int Partition(ref Queue<int> queue, int p, int r)
-        {
-            int x = queue.ElementAt(r);
-            int i = p - 1;
-            for (int j = p; j <= r - 1; j++)
-            {
-                if (queue.ElementAt(j) <= x)
+                while (i != j)
                 {
-                    i ++;
-                    queue.InvertElements(i, j);
+                    if (queue.ElementAt(i) <= queue.ElementAt(j))
+                        --j;
+                    else
+                        queue.SwapElements(i, j);
+                }
+
+                while (i != j)
+                {
+                    if (queue.ElementAt(i) <= queue.ElementAt(j))
+                        ++i;
+                    else
+                        queue.SwapElements(i, j);
                 }
             }
-
-            queue.InvertElements(i + 1, r);
-            return i + 1;
+            if (i - j > leftBound)
+                QuicksortNoPivot(ref queue, leftBound, i - 1);
+            if (j + 1 < rightBound)
+                QuicksortNoPivot(ref queue, j + 1, rightBound);
         }
     }
 }

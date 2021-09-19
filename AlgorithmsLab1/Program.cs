@@ -16,11 +16,11 @@ namespace AlgorithmsLab1
         {
             Queue<int> queue = new Queue<int>();
             Random random = new Random();
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 100; i++)
             {
-                queue.Enqueue(random.Next(400));
+                queue.Enqueue(random.Next(100));
             }
-            HoareSort.Quicksort(ref queue);
+            HoareSort.QuicksortNoPivot(ref queue);
             Console.WriteLine(queue.ToString());
         }
     }

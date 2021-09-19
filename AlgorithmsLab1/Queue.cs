@@ -33,10 +33,14 @@ namespace AlgorithmsLab1
         // Чтение элемента по индексу из очереди
         public T ElementAt(int index)
         {
-            if (queue.Count == 0 && index >= 0) 
+            return ElementAt((uint) index);
+        }
+        public T ElementAt(uint index)
+        {
+            if (queue.Count == 0) 
                 return default(T);
             T item = default(T);
-            for (int _ = 0; _ < Length(); _++)
+            for (uint _ = 0; _ < Length(); _++)
             {
                 if (_ == index)
                     item = TopElement();
@@ -48,8 +52,10 @@ namespace AlgorithmsLab1
         // Вставка элемента по индексу
         public void Replace(int index, T item)
         {
-            if (index < 0)
-                return;
+            Replace((uint) index, item);
+        }
+        public void Replace(uint index, T item)
+        {
             if (index >= Length())
             {
                 int length = Length();
@@ -61,7 +67,7 @@ namespace AlgorithmsLab1
                 return;
             }
             
-            for (int _ = 0; _ < Length(); _++)
+            for (uint _ = 0; _ < Length(); _++)
             {
                 if (_ == index)
                 {
@@ -74,7 +80,11 @@ namespace AlgorithmsLab1
         }
         
         // Поменять местами два элемента очереди
-        public void InvertElements(int index1, int index2)
+        public void SwapElements(int index1, int index2)
+        {
+            SwapElements((uint) index1, (uint) index2);
+        }
+        public void SwapElements(uint index1, uint index2)
         {
             T temp = ElementAt(index1);
             Replace(index1, ElementAt(index2));
@@ -90,7 +100,7 @@ namespace AlgorithmsLab1
         public override string ToString()
         {
             string output = "[ ";
-            for (int _ = 0; _ < Length(); _++)
+            for (uint _ = 0; _ < Length(); _++)
             {
                 if (_ == Length() - 1)
                     output += ElementAt(_).ToString() + " ";
