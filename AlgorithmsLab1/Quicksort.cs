@@ -4,13 +4,13 @@
     {
         public static void QuicksortNoPivot(ref Queue<int> queue)
         {
-            QuicksortNoPivot(ref queue, 0, queue.Length());
+            QuicksortNoPivot(ref queue, 0, (uint)queue.Length());
         }
 
-        public static void QuicksortNoPivot(ref Queue<int> queue, int leftBound,
-            int rightBound)
+        public static void QuicksortNoPivot(ref Queue<int> queue, uint leftBound,
+            uint rightBound)
         {
-            int i = leftBound, j = rightBound;
+            uint i = leftBound, j = rightBound;
             while (i != j)
             {
                 while (i != j)

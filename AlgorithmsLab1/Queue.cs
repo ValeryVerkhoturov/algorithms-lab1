@@ -4,42 +4,43 @@ namespace AlgorithmsLab1
 {
     class Queue<T>
     {
-        private List<T> queue = new List<T>();
+        private List<T> queue;
+        
+        public Queue()  // 1
+        {
+            queue = new List<T>();  // 1
+        }
 
         // Добавление элемента в конец очереди
-        public void Enqueue(T item)
+        public void Enqueue(T item)  // 1
         {
-            queue.Add(item);
+            queue.Add(item);  // 1
         }
 
         // Извлечение первого элемента
-        public T Dequeu()
+        public T Dequeu()  // 2+2=4
         {
-            if (queue.Count == 0) 
+            if (IsEmpty())  // 1
                 return default(T);
-            T item = queue[0];
-            queue.RemoveAt(0);
+            T item = queue[0];  // 2
+            queue.RemoveAt(0);  // 2
             return item;
         }
         
         // Чтение первого элемента
-        public T TopElement()
+        public T TopElement()  // 1
         {
-            if (queue.Count == 0) 
+            if (IsEmpty())  // 1
                 return default(T);
-            return queue[0];
+            return queue[0];  // 1
         }
         
         // Чтение элемента по индексу из очереди
-        public T ElementAt(int index)
-        {
-            return ElementAt((uint) index);
-        }
         public T ElementAt(uint index)
         {
-            if (queue.Count == 0) 
+            if (IsEmpty())  // 1
                 return default(T);
-            T item = default(T);
+            T item = default(T);  // 1
             for (uint _ = 0; _ < Length(); _++)
             {
                 if (_ == index)
@@ -50,10 +51,6 @@ namespace AlgorithmsLab1
         }
         
         // Вставка элемента по индексу
-        public void Replace(int index, T item)
-        {
-            Replace((uint) index, item);
-        }
         public void Replace(uint index, T item)
         {
             if (index >= Length())
@@ -80,10 +77,6 @@ namespace AlgorithmsLab1
         }
         
         // Поменять местами два элемента очереди
-        public void SwapElements(int index1, int index2)
-        {
-            SwapElements((uint) index1, (uint) index2);
-        }
         public void SwapElements(uint index1, uint index2)
         {
             T temp = ElementAt(index1);
@@ -95,6 +88,12 @@ namespace AlgorithmsLab1
         public int Length()
         {
             return queue.Count;
+        }
+
+        // Проверить - список пуст
+        public bool IsEmpty() // 1
+        {
+            return Length() == 0; // 1
         }
         
         public override string ToString()
