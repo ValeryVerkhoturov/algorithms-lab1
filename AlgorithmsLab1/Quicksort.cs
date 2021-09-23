@@ -1,38 +1,37 @@
-﻿namespace AlgorithmsLab1
+﻿
+namespace AlgorithmsLab1
 {
     static class HoareSort
     {
         public static void QuicksortNoPivot(ref Queue<int> queue)
         {
-            QuicksortNoPivot(ref queue, 0, (uint)queue.Length());
+            QuicksortNoPivot(ref queue, 0, queue.Length() - 1);
         }
 
-        public static void QuicksortNoPivot(ref Queue<int> queue, uint leftBound,
-            uint rightBound)
+        public static void QuicksortNoPivot(ref Queue<int> queue, int leftBound, 
+            int rightBound)
         {
-            uint i = leftBound, j = rightBound;
-            while (i != j)
+            if (leftBound >= rightBound)
+                return;
+            (int i, int j) = (leftBound, rightBound);
+            bool mode = true;
+            while (i < j)
             {
-                while (i != j)
+                if (queue.ElementAt(i) > queue.ElementAt(j))
                 {
-                    if (queue.ElementAt(i) <= queue.ElementAt(j))
-                        --j;
-                    else
-                        queue.SwapElements(i, j);
+                    // Перестанока начального и конечного элемента
+                    queue.SwapElements(i, j);
+                    // Смена сокращаемого конца
+                    mode = !mode;
                 }
-
-                while (i != j)
-                {
-                    if (queue.ElementAt(i) <= queue.ElementAt(j))
-                        ++i;
-                    else
-                        queue.SwapElements(i, j);
-                }
+                // Сокращение слева или справа
+                if (mode)
+                    j--;
+                else
+                    i++;
             }
-            if (i - j > leftBound)
-                QuicksortNoPivot(ref queue, leftBound, i - 1);
-            if (j + 1 < rightBound)
-                QuicksortNoPivot(ref queue, j + 1, rightBound);
+            QuicksortNoPivot(ref queue, leftBound, i - 1);
+            QuicksortNoPivot(ref queue, i + 1, rightBound);
         }
     }
 }

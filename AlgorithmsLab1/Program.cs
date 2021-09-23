@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace AlgorithmsLab1
 {
@@ -6,22 +7,23 @@ namespace AlgorithmsLab1
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 1; i++)
-            {
-                TestQuickSort();
-            }
+            TestQuickSort(1000);
+            
         }
 
-        static void TestQuickSort()
+        static void TestQuickSort(int elementsNum)
         {
             Queue<int> queue = new Queue<int>();
             Random random = new Random();
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < elementsNum; i++)
             {
-                queue.Enqueue(random.Next(100));
+                queue.Enqueue(random.Next(Int32.MaxValue));
             }
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             HoareSort.QuicksortNoPivot(ref queue);
-            Console.WriteLine(queue.ToString());
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedMilliseconds / 1000f);
         }
     }
 }
