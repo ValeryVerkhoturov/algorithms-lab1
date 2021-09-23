@@ -6,7 +6,7 @@ namespace AlgorithmsLab1
     class Queue<T>
     {
         private List<T> queue;
-        
+
         public Queue()
         {
             queue = new List<T>();
@@ -27,7 +27,7 @@ namespace AlgorithmsLab1
             queue.RemoveAt(0);
             return item;
         }
-        
+
         // Чтение первого элемента
         public T TopElement()
         {
@@ -35,7 +35,7 @@ namespace AlgorithmsLab1
                 return default(T);
             return queue[0];
         }
-        
+
         // Чтение элемента по индексу из очереди
         public T ElementAt(int index)
         {
@@ -50,9 +50,10 @@ namespace AlgorithmsLab1
                     item = TopElement();
                 Enqueue(Dequeu());
             }
+
             return item;
         }
-        
+
         // Вставка элемента по индексу
         public void Replace(int index, T item)
         {
@@ -65,11 +66,12 @@ namespace AlgorithmsLab1
                 {
                     Enqueue(default(T));
                 }
+
                 Enqueue(item);
                 return;
             }
-            
-            for (uint _ = 0; _ < Length(); _++)
+
+            for (int _ = 0; _ < Length(); _++)
             {
                 if (_ == index)
                 {
@@ -80,7 +82,7 @@ namespace AlgorithmsLab1
                     Enqueue(Dequeu());
             }
         }
-        
+
         // Поменять местами два элемента очереди
         public void SwapElements(int index1, int index2)
         {
@@ -88,7 +90,7 @@ namespace AlgorithmsLab1
             Replace(index1, ElementAt(index2));
             Replace(index2, temp);
         }
-        
+
         // Длина очереди
         public int Length()
         {
@@ -100,7 +102,7 @@ namespace AlgorithmsLab1
         {
             return Length() == 0;
         }
-        
+
         public override string ToString()
         {
             string output = "[ ";

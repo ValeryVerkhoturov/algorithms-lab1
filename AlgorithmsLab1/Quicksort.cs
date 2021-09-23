@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+
 namespace AlgorithmsLab1
 {
     static class HoareSort
@@ -8,8 +9,8 @@ namespace AlgorithmsLab1
             QuicksortNoPivot(ref queue, 0, queue.Length() - 1);
         }
 
-        public static void QuicksortNoPivot(ref Queue<int> queue, int leftBound, 
-            int rightBound)
+        private static void QuicksortNoPivot(ref Queue<int> queue,
+            int leftBound, int rightBound)
         {
             if (leftBound >= rightBound)
                 return;
@@ -19,17 +20,21 @@ namespace AlgorithmsLab1
             {
                 if (queue.ElementAt(i) > queue.ElementAt(j))
                 {
-                    // Перестанока начального и конечного элемента
+                    // Перестановка начального и конечного элемента
                     queue.SwapElements(i, j);
                     // Смена сокращаемого конца
                     mode = !mode;
                 }
+
                 // Сокращение слева или справа
+                // mode == true - сокращение начала очреди
+                // mode == false - сокращение конца очреди
                 if (mode)
                     j--;
                 else
                     i++;
             }
+
             QuicksortNoPivot(ref queue, leftBound, i - 1);
             QuicksortNoPivot(ref queue, i + 1, rightBound);
         }
