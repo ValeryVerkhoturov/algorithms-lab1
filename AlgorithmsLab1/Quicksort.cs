@@ -4,6 +4,7 @@ namespace AlgorithmsLab1
 {
     static class HoareSort
     {
+        /// Сортировка Хоара без медианного элемета
         public static void QuicksortNoPivot(ref Queue<int> queue)
         {
             QuicksortNoPivot(ref queue, 0, queue.Length() - 1);

@@ -12,13 +12,13 @@ namespace AlgorithmsLab1
             queue = new List<T>();
         }
 
-        // Добавление элемента в конец очереди
+        /// Добавление элемента в конец очереди
         public void Enqueue(T item)
         {
             queue.Add(item);
         }
 
-        // Извлечение первого элемента
+        /// Извлечение первого элемента
         public T Dequeu()
         {
             if (IsEmpty())
@@ -28,7 +28,7 @@ namespace AlgorithmsLab1
             return item;
         }
 
-        // Чтение первого элемента
+        /// Чтение первого элемента
         public T TopElement()
         {
             if (IsEmpty())
@@ -36,7 +36,7 @@ namespace AlgorithmsLab1
             return queue[0];
         }
 
-        // Чтение элемента по индексу из очереди
+        /// Чтение элемента по индексу из очереди
         public T ElementAt(int index)
         {
             if (index < 0)
@@ -54,7 +54,7 @@ namespace AlgorithmsLab1
             return item;
         }
 
-        // Вставка элемента по индексу
+        /// Вставка элемента по индексу
         public void Replace(int index, T item)
         {
             if (index < 0)
@@ -83,7 +83,7 @@ namespace AlgorithmsLab1
             }
         }
 
-        // Поменять местами два элемента очереди
+        /// Поменять местами два элемента очереди
         public void SwapElements(int index1, int index2)
         {
             T temp = ElementAt(index1);
@@ -91,13 +91,13 @@ namespace AlgorithmsLab1
             Replace(index2, temp);
         }
 
-        // Длина очереди
+        /// Длина очереди
         public int Length()
         {
             return queue.Count;
         }
 
-        // Проверить - список пуст
+        /// Проверить - список пуст
         public bool IsEmpty()
         {
             return Length() == 0;
