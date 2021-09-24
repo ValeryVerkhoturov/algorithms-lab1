@@ -16,6 +16,8 @@ namespace AlgorithmsLab1
                                   $"\tВремя сортировки (ms): {time}");
                 elementsNum += 300;
             }
+
+            Console.ReadKey();
         }
 
         private static long TestQuickSort(int elementsNum)
