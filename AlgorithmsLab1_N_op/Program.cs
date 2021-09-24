@@ -10,11 +10,11 @@ namespace AlgorithmsLab1_N_op
             int elementsNum = 300;
             for (int i = 0; i < 10; i++)
             {
-                (long time, long N_op) = TestQuickSort(elementsNum);
-                Console.WriteLine($"Номер сортировки: {i}, " +
-                                  $"Количество элементов: {elementsNum}, " +
-                                  $"Время сортировки (ms): {time}, " +
-                                  $"Количество операций: {N_op}");
+                (long time, long n_op) = TestQuickSort(elementsNum);
+                Console.WriteLine($"Номер сортировки: {i}" +
+                                  $"\tКоличество элементов: {elementsNum}" +
+                                  $"\tВремя сортировки (ms): {time}" +
+                                  $"\tКоличество операций: {n_op}");
                 elementsNum += 300;
             }
         }

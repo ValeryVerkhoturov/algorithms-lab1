@@ -11,9 +11,9 @@ namespace AlgorithmsLab1
             for (int i = 0; i < 10; i++)
             {
                 long time = TestQuickSort(elementsNum);
-                Console.WriteLine($"Номер сортировки: {i}, " +
-                                  $"Количество элементов: {elementsNum}, " +
-                                  $"Время сортировки (ms): {time}");
+                Console.WriteLine($"Номер сортировки: {i}," +
+                                  $"\tКоличество элементов: {elementsNum}," +
+                                  $"\tВремя сортировки (ms): {time}");
                 elementsNum += 300;
             }
         }
