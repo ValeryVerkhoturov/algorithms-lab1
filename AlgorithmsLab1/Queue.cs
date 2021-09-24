@@ -22,7 +22,7 @@ namespace AlgorithmsLab1
         public T Dequeu()
         {
             if (IsEmpty())
-                return default(T);
+                return default;
             T item = queue[0];
             queue.RemoveAt(0);
             return item;
@@ -32,7 +32,7 @@ namespace AlgorithmsLab1
         public T TopElement()
         {
             if (IsEmpty())
-                return default(T);
+                return default;
             return queue[0];
         }
 
@@ -42,7 +42,7 @@ namespace AlgorithmsLab1
             if (index < 0)
                 throw new ArgumentOutOfRangeException();
             if (IsEmpty())
-                return default(T);
+                return default;
             T item = default(T);
             for (int _ = 0; _ < Length(); _++)
             {

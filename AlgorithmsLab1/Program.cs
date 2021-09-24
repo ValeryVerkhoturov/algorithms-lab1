@@ -10,16 +10,15 @@ namespace AlgorithmsLab1
             int elementsNum = 300;
             for (int i = 0; i < 10; i++)
             {
-                Stopwatch stopwatch = TestQuickSort(elementsNum);
+                long time = TestQuickSort(elementsNum);
                 Console.WriteLine($"Номер сортировки: {i}, " +
                                   $"Количество элементов: {elementsNum}, " +
-                                  $"Время сортировки (ms): " +
-                                  $"{stopwatch.ElapsedMilliseconds}");
+                                  $"Время сортировки (ms): {time}");
                 elementsNum += 300;
             }
         }
 
-        private static Stopwatch TestQuickSort(int elementsNum)
+        private static long TestQuickSort(int elementsNum)
         {
             Queue<int> queue = new Queue<int>();
             Random random = new Random();
@@ -29,7 +28,7 @@ namespace AlgorithmsLab1
             stopwatch.Start();
             HoareSort.QuicksortNoPivot(ref queue);
             stopwatch.Stop();
-            return stopwatch;
+            return stopwatch.ElapsedMilliseconds;
         }
     }
 }
