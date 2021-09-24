@@ -25,14 +25,11 @@ namespace AlgorithmsLab1_N_op
             Random random = new Random();
             for (int i = 0; i < elementsNum; i++)
                 queue.Enqueue(random.Next(Int32.MaxValue));
-            Scorer.Nullify();
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             HoareSort.QuicksortNoPivot(ref queue);
             stopwatch.Stop();
-            long N_op = Scorer.getN_op();
-            Scorer.Nullify();
-            return (stopwatch.ElapsedMilliseconds, N_op);
+            return (stopwatch.ElapsedMilliseconds, Scorer.PopN_op());
         }
     }
 }

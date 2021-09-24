@@ -4,14 +4,11 @@
     {
         private static long N_op = 0;
 
-        public static long getN_op()
+        public static long PopN_op()
         {
-            return N_op;
-        }
-
-        public static void Nullify()
-        {
+            long n_op = N_op;
             N_op = 0;
+            return n_op;
         }
 
         public static void Increment()
