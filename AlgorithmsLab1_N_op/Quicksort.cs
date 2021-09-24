@@ -1,5 +1,4 @@
-﻿
-namespace AlgorithmsLab1_N_op
+﻿namespace AlgorithmsLab1_N_op
 {
     static class HoareSort
     {

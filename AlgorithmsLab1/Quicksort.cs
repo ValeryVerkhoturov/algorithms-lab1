@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AlgorithmsLab1
+﻿namespace AlgorithmsLab1
 {
     static class HoareSort
     {
