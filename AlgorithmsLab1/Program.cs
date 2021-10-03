@@ -5,6 +5,9 @@ namespace AlgorithmsLab1
 {
     class Program
     {
+        delegate int CountFn(int n);
+        delegate int CountOFn(int n);
+        
         static void Main(string[] args)
         {
             int elementsNum = 300;
