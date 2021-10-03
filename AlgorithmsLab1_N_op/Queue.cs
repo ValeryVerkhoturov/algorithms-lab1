@@ -9,7 +9,7 @@ namespace AlgorithmsLab1_N_op
 
         public Queue()
         {
-            queue = new List<T>(); Scorer.Increment();
+            queue = new List<T>(); Scorer.Increment(2);
         }
 
         /// Добавление элемента в конец очереди
