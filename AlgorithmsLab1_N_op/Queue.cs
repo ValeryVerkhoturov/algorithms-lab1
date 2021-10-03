@@ -33,7 +33,7 @@ namespace AlgorithmsLab1_N_op
         {
             if (IsEmpty())
                 return default;
-            Scorer.Increment();
+            Scorer.Increment(); // индексация в след строке 
             return queue[0];
         }
 
@@ -48,22 +48,25 @@ namespace AlgorithmsLab1_N_op
             }
             if (IsEmpty())
                 return default;
-            T item = default(T); Scorer.Increment();
+            T item = default(T); Scorer.Increment(3);
             Scorer.Increment(2);
             for (int _ = 0; _ < Length(); _++)
             {
                 if (_ == index)
                 {
                     Scorer.Increment();
-                    item = TopElement(); Scorer.Increment();
+                    item = TopElement();
+                    Scorer.Increment();
                 }
-                Enqueue(Dequeu()); Scorer.Increment();
+
+                Enqueue(Dequeu());
+                Scorer.Increment();
                 Scorer.Increment(2);
             }
 
             return item;
         }
-
+            
         /// Вставка элемента по индексу
         public void Replace(int index, T item)
         {
@@ -80,7 +83,7 @@ namespace AlgorithmsLab1_N_op
                 Scorer.Increment(3);
                 for (int _ = 0; _ < index - length; _++)
                 {
-                    Enqueue(default(T)); Scorer.Increment();
+                    Enqueue(default); Scorer.Increment();
                     Scorer.Increment(3);
                 }
 
@@ -99,7 +102,7 @@ namespace AlgorithmsLab1_N_op
                 }
                 else
                     Enqueue(Dequeu()); Scorer.Increment();
-                Scorer.Increment();
+                Scorer.Increment(2);
             }
         }
 

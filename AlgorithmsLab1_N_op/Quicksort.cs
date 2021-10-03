@@ -5,7 +5,7 @@
         /// Сортировка Хоара без медианного элемета
         public static void QuicksortNoPivot(ref Queue<int> queue)
         {
-            Scorer.Increment(2);
+            Scorer.Increment(3);
             QuicksortNoPivot(ref queue, 0, queue.Length() - 1);
         }
 
@@ -17,12 +17,14 @@
             {
                 return;
             }
-            (int i, int j) = (leftBound, rightBound); Scorer.Increment(2);
+
+            int i = leftBound; Scorer.Increment();
+            int j = rightBound; Scorer.Increment();
             bool mode = true; Scorer.Increment();
             Scorer.Increment();
             while (i < j)
             {
-                Scorer.Increment();
+                Scorer.Increment(3);
                 if (queue.ElementAt(i) > queue.ElementAt(j))
                 {
                     // Перестановка начального и конечного элемента
@@ -34,7 +36,6 @@
                 // Сокращение слева или справа
                 // mode == true - сокращение начала очреди
                 // mode == false - сокращение конца очреди
-                Scorer.Increment();
                 if (mode)
                 {
                     j--; Scorer.Increment();
@@ -43,7 +44,7 @@
                 {
                     i++; Scorer.Increment();
                 }
-                Scorer.Increment();
+                Scorer.Increment(); // условие while
             }
 
             QuicksortNoPivot(ref queue, leftBound, i - 1); Scorer.Increment(3);

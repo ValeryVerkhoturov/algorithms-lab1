@@ -16,7 +16,8 @@ namespace AlgorithmsLab1
                                   $"\tВремя сортировки (ms): {time}");
                 elementsNum += 300;
             }
-
+            
+            Console.Write("Press any key to exit");
             Console.ReadKey();
         }
 

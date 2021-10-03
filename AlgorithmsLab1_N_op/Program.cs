@@ -17,6 +17,9 @@ namespace AlgorithmsLab1_N_op
                                   $"\tКоличество операций: {n_op}");
                 elementsNum += 300;
             }
+            
+            Console.Write("Press any key to exit");
+            Console.ReadKey();
         }
 
         private static (long, long) TestQuickSort(int elementsNum)

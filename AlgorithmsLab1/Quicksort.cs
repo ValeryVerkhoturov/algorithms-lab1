@@ -13,7 +13,8 @@
         {
             if (leftBound >= rightBound)
                 return;
-            (int i, int j) = (leftBound, rightBound);
+            int i = leftBound;
+            int j = rightBound;
             bool mode = true;
             while (i < j)
             {
