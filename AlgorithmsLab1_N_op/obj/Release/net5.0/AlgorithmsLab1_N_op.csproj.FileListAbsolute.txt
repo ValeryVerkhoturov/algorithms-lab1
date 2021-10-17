@@ -1,0 +1,16 @@
+C:\Users\Satellite\RiderProjects\AlgorithmsLab1\AlgorithmsLab1_N_op\bin\Release\net5.0\AlgorithmsLab1_N_op.exe
+C:\Users\Satellite\RiderProjects\AlgorithmsLab1\AlgorithmsLab1_N_op\bin\Release\net5.0\AlgorithmsLab1_N_op.deps.json
+C:\Users\Satellite\RiderProjects\AlgorithmsLab1\AlgorithmsLab1_N_op\bin\Release\net5.0\AlgorithmsLab1_N_op.runtimeconfig.json
+C:\Users\Satellite\RiderProjects\AlgorithmsLab1\AlgorithmsLab1_N_op\bin\Release\net5.0\AlgorithmsLab1_N_op.runtimeconfig.dev.json
+C:\Users\Satellite\RiderProjects\AlgorithmsLab1\AlgorithmsLab1_N_op\bin\Release\net5.0\AlgorithmsLab1_N_op.dll
+C:\Users\Satellite\RiderProjects\AlgorithmsLab1\AlgorithmsLab1_N_op\bin\Release\net5.0\ref\AlgorithmsLab1_N_op.dll
+C:\Users\Satellite\RiderProjects\AlgorithmsLab1\AlgorithmsLab1_N_op\bin\Release\net5.0\AlgorithmsLab1_N_op.pdb
+C:\Users\Satellite\RiderProjects\AlgorithmsLab1\AlgorithmsLab1_N_op\obj\Release\net5.0\AlgorithmsLab1_N_op.csprojAssemblyReference.cache
+C:\Users\Satellite\RiderProjects\AlgorithmsLab1\AlgorithmsLab1_N_op\obj\Release\net5.0\AlgorithmsLab1_N_op.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Satellite\RiderProjects\AlgorithmsLab1\AlgorithmsLab1_N_op\obj\Release\net5.0\AlgorithmsLab1_N_op.AssemblyInfoInputs.cache
+C:\Users\Satellite\RiderProjects\AlgorithmsLab1\AlgorithmsLab1_N_op\obj\Release\net5.0\AlgorithmsLab1_N_op.AssemblyInfo.cs
+C:\Users\Satellite\RiderProjects\AlgorithmsLab1\AlgorithmsLab1_N_op\obj\Release\net5.0\AlgorithmsLab1_N_op.csproj.CoreCompileInputs.cache
+C:\Users\Satellite\RiderProjects\AlgorithmsLab1\AlgorithmsLab1_N_op\obj\Release\net5.0\AlgorithmsLab1_N_op.dll
+C:\Users\Satellite\RiderProjects\AlgorithmsLab1\AlgorithmsLab1_N_op\obj\Release\net5.0\ref\AlgorithmsLab1_N_op.dll
+C:\Users\Satellite\RiderProjects\AlgorithmsLab1\AlgorithmsLab1_N_op\obj\Release\net5.0\AlgorithmsLab1_N_op.pdb
+C:\Users\Satellite\RiderProjects\AlgorithmsLab1\AlgorithmsLab1_N_op\obj\Release\net5.0\AlgorithmsLab1_N_op.genruntimeconfig.cache
